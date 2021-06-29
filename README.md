@@ -1,27 +1,61 @@
 # PipesApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
+Esta aplicación fue hecha para ayudar a entender el manejo de [Pipes](https://angular.io/api/core/Pipe) de [Angular](https://angular.io/).
 
-## Development server
+También utilizamos [PrimeNG](https://primefaces.org/primeng) para hacer que la aplicación sea visualmente mas agradable.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Instalación de [PrimeNG](https://primefaces.org/primeng)
 
-## Code scaffolding
+Ejecutar el siguiente comando para instalar los paquetes `primeng` y `primeicons`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+``` code
+npm install primeng primeicons
+```
 
-## Build
+Luego modifique el archivo `angular.json` y agrege los estilos de CSS en la sección styles
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+``` code
+"styles": [
+    "src/styles.css",
+    "node_modules/primeicons/primeicons.css",
+    "node_modules/primeng/resources/themes/vela-blue/theme.css",
+    "node_modules/primeng/resources/primeng.min.css"
+],
+```
 
-## Running unit tests
+## [PrimeFlex](https://primefaces.org/primeng/showcase/#/primeflex)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+PrimeFlex es una biblioteca de utilidades CSS que presenta varios ayudantes, como un sistema de cuadrícula, caja flexible, espaciado, elevación y más. Aunque no es necesario, se recomienda encarecidamente agregar PrimeFlex, ya que es probable que necesite dichas utilidades al desarrollar aplicaciones con PrimeNG.
 
-## Running end-to-end tests
+`Instalación`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+``` code
+npm install primeflex --save
+```
 
-## Further help
+`Importar CSS`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Agregar primeflex.css al archivo `angular.json`
+
+``` code
+"styles": [
+    "src/styles.css",
+    "node_modules/primeflex/primeflex.css"
+],
+```
+
+## Temas puntuales
+
+- [Lowercase](https://angular.io/api/common/LowerCasePipe)
+- [Uppercase](https://angular.io/api/common/UpperCasePipe)
+- [Titlecase](https://angular.io/api/common/TitleCasePipe)
+- [DatePipe](https://angular.io/api/common/DatePipe)
+- [DecimalPipe](https://angular.io/api/common/DecimalPipe)
+- [CurrencyPipe](https://angular.io/api/common/CurrencyPipe)
+- [PercentPipe](https://angular.io/api/common/PercentPipe)
+- [I18nSelectPipe](https://angular.io/api/common/I18nSelectPipe)
+- [I18nPluralPipe](https://angular.io/api/common/I18nPluralPipe)
+- [SlicePipe](https://angular.io/api/common/SlicePipe)
+- [KeyValuePipe](https://angular.io/api/common/KeyValuePipe)
+- [JsonPipe](https://angular.io/api/common/JsonPipe)
+- [AsyncPipe](https://angular.io/api/common/AsyncPipe)
